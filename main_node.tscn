@@ -1,0 +1,70 @@
+[gd_scene load_steps=4 format=3 uid="uid://dn2trbaq5qnuu"]
+
+[ext_resource type="Texture2D" uid="uid://d2vw35iqqm5fc" path="res://BGTest.png" id="1_8risc"]
+[ext_resource type="Script" path="res://main_node.gd" id="1_lditn"]
+[ext_resource type="PackedScene" uid="uid://5yf42fyl6pnh" path="res://TabButton.tscn" id="3_fhefx"]
+
+[node name="MainNode" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_lditn")
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+self_modulate = Color(0.525101, 0.525101, 0.525101, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_8risc")
+expand_mode = 1
+stretch_mode = 6
+metadata/_edit_use_anchors_ = true
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 34.0
+grow_horizontal = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="TabButton" parent="CenterContainer/HBoxContainer" instance=ExtResource("3_fhefx")]
+custom_minimum_size = Vector2(72.055, 23.55)
+layout_mode = 2
+text = "Layout"
+TabID = "Layout"
+
+[node name="TabButton2" parent="CenterContainer/HBoxContainer" instance=ExtResource("3_fhefx")]
+custom_minimum_size = Vector2(72.055, 23.55)
+layout_mode = 2
+text = "Test"
+TabID = "Test"
+
+[node name="ModeContainer" type="Control" parent="."]
+layout_mode = 1
+anchor_top = 0.058642
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Control" type="Control" parent="ModeContainer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
