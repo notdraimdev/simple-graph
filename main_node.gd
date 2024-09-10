@@ -8,7 +8,9 @@ func _ready() -> void:
 func CallChangeTabToID(TabID:String):
 	match TabID:
 		"Layout":
-			
+			print("works")
+		"Test":
+			print("works")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
