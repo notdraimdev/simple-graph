@@ -1,13 +1,10 @@
-class_name TabButton
-extends Button
-@export var TabID:String = ""
+extends Control
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	if !TabID:
-		push_error("Error: TabID empty on: %s" %name)
-	else:
-		pressed.connect(owner.hideExcept.bind(TabID))
+	pass # Replace with function body.
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
