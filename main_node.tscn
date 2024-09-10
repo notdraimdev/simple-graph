@@ -16,7 +16,7 @@ size_flags_vertical = 3
 script = ExtResource("1_lditn")
 metadata/_edit_use_anchors_ = true
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="BackroundImage" type="TextureRect" parent="."]
 self_modulate = Color(0.525101, 0.525101, 0.525101, 1)
 layout_mode = 1
 anchors_preset = 15
@@ -60,11 +60,41 @@ grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="Control" type="Control" parent="ModeContainer"]
+[node name="Layout" type="Control" parent="ModeContainer"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="BG" type="ColorRect" parent="ModeContainer/Layout"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.219501, 0.219501, 0.219501, 0.490196)
+metadata/_edit_use_anchors_ = true
+
+[node name="Test" type="Control" parent="ModeContainer"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="BG" type="ColorRect" parent="ModeContainer/Test"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.219501, 0.219501, 0.219501, 0.490196)
 metadata/_edit_use_anchors_ = true
