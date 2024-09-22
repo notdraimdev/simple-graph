@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://dn2trbaq5qnuu"]
+[gd_scene load_steps=6 format=3 uid="uid://dn2trbaq5qnuu"]
 
 [ext_resource type="Texture2D" uid="uid://d2vw35iqqm5fc" path="res://BGTest.png" id="1_8risc"]
 [ext_resource type="Script" path="res://main_node.gd" id="1_lditn"]
 [ext_resource type="PackedScene" uid="uid://5yf42fyl6pnh" path="res://TabButton.tscn" id="3_fhefx"]
 [ext_resource type="Script" path="res://list.gd" id="4_ua6pu"]
+[ext_resource type="PackedScene" uid="uid://cnf6k5bcyries" path="res://ListNode.tscn" id="5_m4e5m"]
 
 [node name="MainNode" type="Control"]
 layout_mode = 3
@@ -86,6 +87,14 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.206413, 0.293459, 0.355791, 0.490196)
 metadata/_edit_use_anchors_ = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ModeContainer/List"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ListNode" parent="ModeContainer/List/HBoxContainer" instance=ExtResource("5_m4e5m")]
+layout_mode = 2
 
 [node name="Test" type="Control" parent="ModeContainer"]
 visible = false

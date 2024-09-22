@@ -15,10 +15,6 @@ run/main_scene="res://main_node.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
 
-[autoload]
-
-DiscordRPCLoader="*res://addons/discord-rpc-gd/nodes/discord_autoload.gd"
-
 [dotnet]
 
 project/assembly_name="Simple graph"
@@ -30,7 +26,7 @@ version_control/autoload_on_startup=true
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/discord-rpc-gd/plugin.cfg")
+enabled=PackedStringArray()
 
 [rendering]
 
