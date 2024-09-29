@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://d1c1ajvl21anp" path="res://item.tscn" id="1_8ir5p"]
 
 [node name="ListNode" type="PanelContainer"]
-custom_minimum_size = Vector2(150, 281)
+custom_minimum_size = Vector2(200, 281)
 anchors_preset = 13
 anchor_left = 0.5
 anchor_right = 0.5
@@ -18,29 +18,39 @@ size_flags_vertical = 3
 layout_mode = 2
 color = Color(0.2447, 0.296119, 0.338813, 1)
 
-[node name="BoxContainer" type="BoxContainer" parent="."]
+[node name="MainContainer" type="BoxContainer" parent="."]
 layout_mode = 2
 vertical = true
 
-[node name="TextEdit" type="LineEdit" parent="BoxContainer"]
+[node name="Head" type="HBoxContainer" parent="MainContainer"]
+layout_mode = 2
+
+[node name="TextEdit" type="LineEdit" parent="MainContainer/Head"]
 custom_minimum_size = Vector2(150, 40)
 layout_mode = 2
 size_flags_horizontal = 3
 placeholder_text = "name"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="BoxContainer"]
+[node name="VBoxContainer" type="MenuButton" parent="MainContainer/Head"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+text = ":"
+item_count = 1
+popup/item_0/text = "remove"
+
+[node name="Buttons" type="HBoxContainer" parent="MainContainer"]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 
-[node name="Button" type="Button" parent="BoxContainer/HBoxContainer"]
+[node name="Button" type="Button" parent="MainContainer/Buttons"]
 custom_minimum_size = Vector2(40, 0)
 layout_mode = 2
 text = "+"
 
-[node name="ItemContainer" type="BoxContainer" parent="BoxContainer"]
+[node name="ItemContainer" type="BoxContainer" parent="MainContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 vertical = true
 
-[node name="Item" parent="BoxContainer/ItemContainer" instance=ExtResource("1_8ir5p")]
+[node name="Item" parent="MainContainer/ItemContainer" instance=ExtResource("1_8ir5p")]
 layout_mode = 2

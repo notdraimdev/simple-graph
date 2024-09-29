@@ -22,7 +22,7 @@ layout_mode = 2
 [node name="LineEdit" type="LineEdit" parent="VBoxContainer/BoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-placeholder_text = "description"
+placeholder_text = "item summary"
 expand_to_text_length = true
 
 [node name="VBoxContainer" type="MenuButton" parent="VBoxContainer/BoxContainer"]
@@ -30,7 +30,7 @@ custom_minimum_size = Vector2(10, 0)
 layout_mode = 2
 text = ":"
 item_count = 1
-popup/item_0/text = "aadd"
+popup/item_0/text = "remove"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
@@ -38,4 +38,4 @@ size_flags_vertical = 8
 
 [node name="Button" type="Button" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2
-text = "view"
+text = "Full View"
