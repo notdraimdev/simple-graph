@@ -110,12 +110,12 @@ grow_horizontal = 2
 grow_vertical = 2
 follow_focus = true
 
-[node name="HBoxContainer" type="HBoxContainer" parent="ModeContainer/List/ScrollContainer"]
+[node name="ListsContainer" type="HBoxContainer" parent="ModeContainer/List/ScrollContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="ListNode" parent="ModeContainer/List/ScrollContainer/HBoxContainer" instance=ExtResource("5_m4e5m")]
+[node name="ListNode" parent="ModeContainer/List/ScrollContainer/ListsContainer" instance=ExtResource("5_m4e5m")]
 layout_mode = 2
 
 [node name="Test" type="Control" parent="ModeContainer"]

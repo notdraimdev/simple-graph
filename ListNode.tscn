@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cnf6k5bcyries"]
 
-[ext_resource type="PackedScene" uid="uid://d1c1ajvl21anp" path="res://item.tscn" id="1_8ir5p"]
+[ext_resource type="Script" path="res://list_node_script.gd" id="1_g4bu8"]
 
 [node name="ListNode" type="PanelContainer"]
 custom_minimum_size = Vector2(200, 281)
@@ -13,6 +13,7 @@ offset_right = 75.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 3
+script = ExtResource("1_g4bu8")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 2
@@ -25,7 +26,7 @@ vertical = true
 [node name="Head" type="HBoxContainer" parent="MainContainer"]
 layout_mode = 2
 
-[node name="TextEdit" type="LineEdit" parent="MainContainer/Head"]
+[node name="NameEdit" type="LineEdit" parent="MainContainer/Head"]
 custom_minimum_size = Vector2(150, 40)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -51,6 +52,3 @@ text = "+"
 layout_mode = 2
 size_flags_vertical = 3
 vertical = true
-
-[node name="Item" parent="MainContainer/ItemContainer" instance=ExtResource("1_8ir5p")]
-layout_mode = 2
