@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://dn2trbaq5qnuu"]
+[gd_scene load_steps=6 format=3 uid="uid://dn2trbaq5qnuu"]
 
 [ext_resource type="Texture2D" uid="uid://d2vw35iqqm5fc" path="res://BGTest.png" id="1_8risc"]
 [ext_resource type="Script" path="res://main_node.gd" id="1_lditn"]
 [ext_resource type="PackedScene" uid="uid://5yf42fyl6pnh" path="res://TabButton.tscn" id="3_fhefx"]
+[ext_resource type="Script" path="res://listDataHandler.gd" id="4_cvgc3"]
 [ext_resource type="PackedScene" uid="uid://cnf6k5bcyries" path="res://ListNode.tscn" id="5_m4e5m"]
 
 [node name="MainNode" type="Control"]
@@ -74,6 +75,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("4_cvgc3")
 metadata/_edit_use_anchors_ = true
 
 [node name="BG" type="ColorRect" parent="ModeContainer/List"]
