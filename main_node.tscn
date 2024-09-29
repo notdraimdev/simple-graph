@@ -88,12 +88,29 @@ grow_vertical = 2
 color = Color(0.206413, 0.293459, 0.355791, 0.490196)
 metadata/_edit_use_anchors_ = true
 
-[node name="HBoxContainer" type="HBoxContainer" parent="ModeContainer/List"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="Buttons" type="HBoxContainer" parent="ModeContainer/List"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
 
-[node name="ListNode" parent="ModeContainer/List/HBoxContainer" instance=ExtResource("5_m4e5m")]
+[node name="ScrollContainer" type="ScrollContainer" parent="ModeContainer/List"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+follow_focus = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ModeContainer/List/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ListNode" parent="ModeContainer/List/ScrollContainer/HBoxContainer" instance=ExtResource("5_m4e5m")]
 layout_mode = 2
 
 [node name="Test" type="Control" parent="ModeContainer"]
@@ -131,3 +148,16 @@ layout_mode = 0
 offset_right = 145.0
 offset_bottom = 41.0
 text = "aaaaaaaaaaa"
+
+[node name="VersionLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -23.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "v0.0.a1"
